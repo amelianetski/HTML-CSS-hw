@@ -1,0 +1,22 @@
+=align-center()
+    display: inline-flex
+    align-items: center
+
+=buttons-reset()
+    border: 0
+    padding: 16px 38px
+    margin-bottom: 10px
+    border-radius: 6px
+    cursor: pointer
+    white-space: nowrap
+
+=send-button()
+    +buttons-reset()
+    background-color: rgb(77, 117, 163)
+    color: #ffffff
+
+=add-button()
+    +buttons-reset()
+    background-color: white
+    border: 2px solid rgb(77, 117, 163)
+    color: rgb(77, 117, 163)

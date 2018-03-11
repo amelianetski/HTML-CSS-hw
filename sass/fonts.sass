@@ -1,0 +1,14 @@
+=font-face($family, $path)
+  @font-face
+    font-family: $family
+    src: url('#{$path}.ttf') format('truetype')
++font-face('OpenSans-Regular', '../fonts/Open-Sans/OpenSans-Regular')
++font-face('OpenSans-Light', '../fonts/Open-Sans/OpenSans-Light')
++font-face('OpenSans-SemiBold', '../fonts/Open-Sans/OpenSans-SemiBold')
++font-face('OpenSans-Bold', '../fonts/Open-Sans/OpenSans-Bold')
+
+=font-face-proxima($family, $path)
+  @font-face
+    font-family: $family
+    src: url('#{$path}.otf') format('opentype')
++font-face-proxima('ProximaNova-Semibold', '../fonts/Proxima-Nova/ProximaNovaSemibold')

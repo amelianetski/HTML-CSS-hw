@@ -1,0 +1,198 @@
+@import 'reset'
+@import 'vars'
+@import 'mixins'
+
+body
+    padding: 30px 15px
+
+h2
+    font-size: 24px
+    font-family: 'OpenSans-Light'
+
+a
+    text-decoration: none
+
+.wrapper
+    max-width: $max_width
+    margin: 0 auto
+
+.header
+    border-radius: 8px
+    color: #ffffff
+    overflow: hidden
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    margin-bottom: 50px
+    &__bar
+        height: 75px
+        width: 100%
+        background-color: rgb(77, 117, 163)
+        +align-center()
+        justify-content: space-between
+        .bar__actions
+            height: 100%
+            +align-center()
+            .actions__logo
+                padding: 0 25px
+                border-right: 1px solid rgb(65, 99, 138)
+                height: 100%
+                +align-center()
+                &:hover
+                    cursor: pointer
+                .logo_text
+                    text-transform: uppercase
+                    font-family: 'OpenSans-Bold'
+            .actions__notifi, .actions__people, .actions__messages
+                height: 100%
+                +align-center()
+                padding: 0 25px
+                border-right: 1px solid rgb(65, 99, 138)
+                color: rgb(162, 177, 201)
+                &:hover
+                    color: #ffffff
+                    cursor: pointer
+            .actions__notifi
+                i
+                    position: relative
+                    &::after
+                        content: '1'
+                        font-family: 'OpenSans-Bold'
+                        z-index: 10
+                        position: absolute
+                        top: -10px
+                        right: -10px    
+                        font-size: 9px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        width: 16px
+                        height: 16px
+                        border: 1px solid rgb(77, 117, 163)
+                        background-color: rgb(255, 97, 97)
+                        border-radius: 3px
+            .actions_active
+                color: #ffffff
+        .bar__user
+            height: 100%
+            +align-center()
+            .user__profile, .user__search, .user__logout
+                height: 100%
+                +align-center()
+                padding: 0 25px
+                color: rgb(162, 177, 201)
+                &:hover
+                    color: #ffffff
+                    cursor: pointer
+            .user__profile
+                font-family: 'ProximaNova-Semibold'
+                padding-right: 41px
+                &::after
+                    content: ''
+                    display: inline-block
+                    margin-left: 10px
+                    width: 0
+                    height: 0
+                    border-top: 7px solid rgb(162, 177, 201)
+                    border-left: 7px solid transparent
+                    border-right: 7px solid transparent
+                &:hover::after
+                    border-top: 7px solid #ffffff
+                .user__profile_name
+                    font-size: 14px
+                    margin-right: 21px
+            .user__search
+                border-right: 1px solid rgb(65, 99, 138)
+                border-left: 1px solid rgb(65, 99, 138)
+            .user__profile.user_active
+                color: #ffffff
+                &::after
+                    border-top: 7px solid #ffffff
+    &__nav
+        height: 75px
+        width: 100%
+        +align-center()
+        justify-content: center
+        background-color: #fff
+        .nav__list
+            display: inline-flex
+            height: 100%
+            .list__item
+                font-size: 18px
+                margin: 0 25px
+                a
+                    font-family: 'OpenSans-SemiBold'
+                    font-weight: 400
+                    +align-center()
+                    height: 100%
+                    color: $main_text_color
+                    &:hover
+                        color: $active_link_color
+            .list__item_active 
+                border-bottom: 5px solid $active_link_color
+                a 
+                    font-weight: 600
+                    color: $active_link_color
+
+.user
+    background-color: #ffffff
+    border-radius: 8px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    padding: 46px 50px
+    display: inline-flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    &__about
+        +align-center()
+        border-right: 1px solid rgb(229, 229, 229)
+        padding-right: 28px
+        .about__logo img
+            width: 100px
+            height: 100px
+            border-radius: 50%
+        .about__props
+            margin-left: 20px
+            .props_name
+                margin-bottom: 10px
+                span
+                    color: rgb(63, 79, 95)
+                    font-size: 24px
+                    font-weight: 600
+            .props_text
+                p
+                    color: rgb(102, 122, 144)
+                    font-size: 14px
+                    font-weight: 400
+                    line-height: 24px
+    &__info
+        display: inline-flex
+        .info__count
+            display: inline-flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            margin: 20px
+            .count_numbers 
+                margin-bottom: 10px
+                span
+                    font-family: 'OpenSans-SemiBold'
+                    color: rgb(77, 117, 163)
+                    font-size: 24px
+                    font-weight: 600
+            .count_text span
+                font-size: 14px
+                font-family: 'OpenSans-SemiBold'
+                color: rgb(102, 122, 144)
+                font-weight: 400
+    &__actions
+        display: inline-flex
+        flex-direction: column
+        padding-left: 28px
+        .actions_send
+            +send-button()
+        .actions_add
+            +add-button()
+    
+
+
+
+@import 'media'

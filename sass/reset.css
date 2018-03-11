@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/Open-Sans/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../fonts/Open-Sans/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("../fonts/Open-Sans/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/Open-Sans/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  src: url("../fonts/Proxima-Nova/ProximaNovaSemibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/Open-Sans/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../fonts/Open-Sans/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("../fonts/Open-Sans/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/Open-Sans/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  src: url("../fonts/Proxima-Nova/ProximaNovaSemibold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'OpenSans-Regular', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  background-color: #e9e8e4;
+}
+
+ol, ul {
+  list-style: none;
+}
+/*# sourceMappingURL=reset.css.map */
