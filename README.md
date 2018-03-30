@@ -1,2 +1,2 @@
 # HTML-CSS-hw
-https://amelianetski.github.io/HTML-CSS-hw/
+https://omelenetskiy.github.io/HTML-CSS-hw/
