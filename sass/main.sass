@@ -23,32 +23,28 @@ a
 .header
     border-radius: 8px
     color: #ffffff
-    overflow: hidden
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    overflow: hidden 
+    +card()
     margin-bottom: 50px
     &__bar
-        height: 75px
         width: 100%
         background-color: rgb(77, 117, 163)
-        +align-center()
+        display: inline-flex 
         justify-content: space-between
-        .bar__actions
-            height: 100%
+        .bar__actions 
             +align-center()
             .actions__logo
-                padding: 0 25px
+                padding: 30px 25px
                 border-right: 1px solid rgb(65, 99, 138)
-                height: 100%
                 +align-center()
                 &:hover
-                    cursor: pointer
+                    cursor: pointer 
                 .logo_text
                     text-transform: uppercase
                     font-family: 'OpenSans-Bold'
             .actions__notifi, .actions__people, .actions__messages
-                height: 100%
                 +align-center()
-                padding: 0 25px
+                padding: 30px 25px
                 border-right: 1px solid rgb(65, 99, 138)
                 color: rgb(162, 177, 201)
                 &:hover
@@ -76,12 +72,10 @@ a
             .actions_active
                 color: #ffffff
         .bar__user
-            height: 100%
             +align-center()
             .user__profile, .user__search, .user__logout
-                height: 100%
                 +align-center()
-                padding: 0 25px
+                padding: 30px 25px
                 color: rgb(162, 177, 201)
                 &:hover
                     color: #ffffff
@@ -107,10 +101,10 @@ a
                 border-right: 1px solid rgb(65, 99, 138)
                 border-left: 1px solid rgb(65, 99, 138)
             .user__profile.user_active
-                color: #ffffff
-                &::after
+                color: #ffffff 
+                &::after  
                     border-top: 7px solid #ffffff
-    &__nav
+    &__nav 
         height: 75px
         width: 100%
         +align-center()
@@ -118,9 +112,10 @@ a
         background-color: #fff
         .nav__list
             display: inline-flex
+            flex-flow: row wrap
+            justify-content: center
             height: 100%
             .list__item
-                font-size: 18px
                 margin: 0 25px
                 a
                     font-family: 'OpenSans-SemiBold'
@@ -135,15 +130,14 @@ a
                         font-weight: 600
 
 .user
-    background-color: #ffffff
-    border-radius: 8px
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    +card()
     padding: 46px 50px
     display: flex
     flex-flow: row nowrap
     width: 100%
     justify-content: space-between
     align-items: center
+    margin-bottom: 50px
     &__about
         +align-center()
         border-right: 1px solid rgb(229, 229, 229)
@@ -192,8 +186,74 @@ a
         padding-left: 28px
         .actions_send
             +send-button()
+.cards
+    display: flex
+    flex-flow: row wrap
+    .card
+        +card()
+        flex-basis: 30%
+        color: rgb(114, 114, 114)
+        &__header 
+            +card-header() 
+            padding: 20px 30px
+        &__body
+            padding: 20px 30px
+            .body__feed
+                .feed__user
+                    display: inline-flex
+                    align-items: center
+                    flex-direction: row
+                    margin: 5px 0
+                    .user__img
+                        color: rgba(0, 0, 0, .37)
+                        width: $feed_img_width
+                        margin-right: 38px - ($feed_img_width/2)
+                        text-align: center
+                    .user__name
+                        font-size: 14px
+                        font-weight: 400
+                        a 
+                            color: rgb(77, 117, 163)
+                            &:hover
+                                color: #4d75a3
+                .feed__attach
+                    margin-left: $feed_img_width / 2
+                    min-height: 15px
+                    border-left: 1px solid rgba(0, 0, 0, .12)
+                    padding-left: 38px
+                    font-size: 14px
+                    a 
+                        color: rgb(77, 117, 163)
+                        &:hover
+                            color: #4d75a3
+                    .attach__title
+                        width: 100%
+                        display: block
+                    .attach__img
+                        +align-center()
+                        flex-direction: row
+                        img
+                            margin: 10px 3px
+                            &:first-child
+                                margin-left: 0 
+                .feed__attach_shared
+                    border-left:  none
+                    display: inline-flex
+                    .attach__img_shared 
+                        border-left: 2px solid rgb(77, 117, 163)
+                        padding-left: 15px
+                        img 
+                            margin: 0
+                    .attach__text_shared
+                        margin-left: 20px
+                        a
+                            display: block
+                            margin-bottom: 10px
+
+        &__footer 
+            +card-footer()
     
-   
-     
-   
-@import 'media' 
+  
+ 
+  
+@import 'media'  

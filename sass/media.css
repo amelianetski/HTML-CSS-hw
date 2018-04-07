@@ -43,6 +43,17 @@
   :root {
     font-size: 14px;
   }
+  .header__bar {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .header__bar .bar__actions .actions__logo, .header__bar .bar__actions .actions__notifi, .header__bar .bar__actions .actions__people, .header__bar .bar__actions .actions__messages {
+    border: none;
+  }
+  .header__bar .bar__user .user__search {
+    border-right: none;
+    border-left: none;
+  }
   .user {
     padding: 20px;
   }
@@ -55,6 +66,15 @@
 @media (max-width: 520px) {
   :root {
     font-size: 12px;
+  }
+  .header__nav .nav__list .list__item {
+    margin: 0 18px;
+  }
+  .header__bar .bar__actions .actions__logo, .header__bar .bar__actions .actions__notifi, .header__bar .bar__actions .actions__people, .header__bar .bar__actions .actions__messages {
+    padding: 20px 18px;
+  }
+  .header__bar .bar__user .user__search, .header__bar .bar__user .user__logout, .header__bar .bar__user .user__profile {
+    padding: 20px 18px;
   }
   .user__about {
     flex-direction: column;

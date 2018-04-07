@@ -22,7 +22,49 @@
         color: #ffffff
 
 =ellipsis()
-    max-width: 200px
+    max-width: 150px
     overflow: hidden
-    text-overflow: ellipsis
     white-space: nowrap
+    text-overflow: ellipsis
+
+=card()
+    background-color: #ffffff
+    border-radius: 8px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    overflow: hidden
+
+=card-header()
+    width: 100%
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    h2, a
+        color: rgba(0, 0, 0, .47)
+        font-size: 24px
+        font-weight: 300
+    a 
+        font-size: 18px
+
+=card-footer()
+    padding: 20px 0
+    background-color: rgb(235, 244, 250)
+    text-align: center
+    a
+        text-transform: uppercase
+        color: rgb(117, 149, 185)
+        font-weight: 600
+        font-size: 12px
+        &:hover
+            color: #4d75a3
+        &::after
+            content: ''
+            display: inline-block
+            margin-left: 10px
+            width: 0
+            height: 0
+            border-top: 5px solid rgb(162, 177, 201)
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+        &:hover::after
+            border-top: 5px solid #4d75a3
+

@@ -21,7 +21,7 @@
 		&__about
 			flex-basis: 100%
 			border-right: none
-			justify-content: center
+			justify-content: center 
 			padding: 0
 		&__info
 			flex-basis: 100%
@@ -29,6 +29,17 @@
 @media (max-width: 768px)
 	\:root
 		font-size: 14px
+	.header
+		&__bar
+			flex-flow: row wrap
+			justify-content: center
+			.bar__actions
+				.actions__logo, .actions__notifi, .actions__people, .actions__messages
+					border: none
+			.bar__user
+				.user__search
+					border-right: none
+					border-left: none
 	.user
 		padding: 20px
 		&__about
@@ -38,6 +49,18 @@
 @media (max-width: 520px)
 	\:root
 		font-size: 12px
+	.header
+		&__nav
+			.nav__list 
+				.list__item
+					margin: 0 18px
+		&__bar
+			.bar__actions
+				.actions__logo, .actions__notifi, .actions__people, .actions__messages
+					padding: 20px 18px
+			.bar__user
+				.user__search, .user__logout, .user__profile
+					padding: 20px 18px
 	.user
 		&__about
 			flex-direction: column

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="sass/main.css">
 </head>
+
 <body>
     <div class="wrapper">
         <header class="header">
@@ -37,15 +39,25 @@
                     <div class="user__logout">
                         <i class="fa fa-sign-out" aria-hidden="true"></i>
                     </div>
-                </div>   
+                </div>
             </div>
             <nav class="header__nav">
                 <ul class="nav__list">
-                    <li class="list__item list__item_active"><a href="#">Dialogues</a></li>
-                    <li class="list__item"><a href="#">Photos</a></li>
-                    <li class="list__item"><a href="#">Videos</a></li>
-                    <li class="list__item"><a href="#">Music</a></li>
-                    <li class="list__item"><a href="#">Communities</a></li>
+                    <li class="list__item list__item_active">
+                        <a href="#">Dialogues</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#">Photos</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#">Videos</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#">Music</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#">Communities</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -104,6 +116,112 @@
                 <button class="actions_send">Add Friend</button>
             </div>
         </section>
+        <section class="cards">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Activity Feed</h2>
+                    <a href="#">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="card__body">
+                    <div class="body__feed">
+                        <div class="feed__user">
+                            <div class="user__img">
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="user__name">
+                                <a href="#">Kevin Ertan</a>
+                            </div>
+                        </div>
+                        <div class="feed__attach">
+                            <div class="attach__title">
+                                <span>
+                                    Added 4 photos to album 
+                                    <a href="#">Summer</a>
+                                </span>
+                            </div>
+                            <div class="attach__img">
+                                <img src="img/attach/Y51aFguqRcGTgsYRYBXV_20140104_085932.png" alt="">
+                                <img src="img/attach/Y51aFguqRcGTgsYRYBXV_20140104_085932.png" alt="">
+                                <img src="img/attach/Y51aFguqRcGTgsYRYBXV_20140104_085932.png" alt="">
+                                <img src="img/attach/Y51aFguqRcGTgsYRYBXV_20140104_085932.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body__feed">
+                        <div class="feed__user">
+                            <div class="user__img">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            </div>
+                            <div class="user__name">
+                                <a href="#">John Doe</a>
+                                <span> liked 2 photos of </span>
+                                <a href="#">Alex Wayne</a>
+                            </div>
+                        </div>
+                        <div class="feed__attach">
+                            <div class="attach__img">
+                                <img src="img/attach/Y51aFguqRcGTgsYRYBXV_20140104_085932.png" alt="">
+                                <img src="img/attach/Y51aFguqRcGTgsYRYBXV_20140104_085932.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body__feed">
+                        <div class="feed__user">
+                            <div class="user__img">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                            <div class="user__name">
+                                <a href="#">John Doe</a>
+                                <span> added </span>
+                                <a href="#">Alex Wayne</a>
+                                <span> to friends </span>
+                            </div>
+                        </div>
+                        <div class="feed__attach"></div>
+                    </div>
+                    <div class="body__feed">
+                        <div class="feed__user">
+                            <div class="user__img">
+                                    <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="user__name">
+                                <a href="#">Alex Gilev</a>
+                                <span> created the </span>
+                                <a href="#">Bowling</a>
+                                <span> event </span>
+                            </div>
+                        </div>
+                        <div class="feed__attach"></div>
+                    </div>
+                    <div class="body__feed">
+                        <div class="feed__user">
+                            <div class="user__img">
+                                <i class="fa fa-lg fa-volume-off"></i>
+                            </div>
+                            <div class="user__name">
+                                <a href="#">David Vane</a>
+                                <span> shared a link:</span>
+                            </div>
+                        </div>
+                        <div class="feed__attach feed__attach_shared">
+                            <div class="attach__img_shared">
+                                <img src="img/attach/Y51aFguqRcGTgsYRYBXV_20140104_085932.png" alt="">
+                            </div>
+                            <div class="attach__text_shared">
+                                <a href="#">Lorem, ipsum dolor</a>
+                                <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__footer">
+                    <a href="#">Show earlier activity</a>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
+
 </html>
