@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "OpenSans-Regular";
   src: url("../fonts/Open-Sans/OpenSans-Regular.ttf") format("truetype");
@@ -57,6 +58,11 @@
   box-sizing: border-box;
 }
 
+*::before,
+*::afterы {
+  box-sizing: inherit;
+}
+
 body {
   line-height: 1;
   background-color: #e9e8e4;
@@ -64,5 +70,10 @@ body {
 
 ol, ul {
   list-style: none;
+}
+
+::selection {
+  color: #000;
+  background: #fbd404;
 }
 /*# sourceMappingURL=reset.css.map */

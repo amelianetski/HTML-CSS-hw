@@ -1,1 +1,69 @@
-/* No CSS *//*# sourceMappingURL=media.css.map */
+@media (max-width: 1200px) {
+  :root {
+    font-size: 18px;
+  }
+  .user {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .user__about {
+    flex-basis: 50%;
+  }
+  .user__actions {
+    flex-direction: row;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .user__actions .actions_send {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    font-size: 16px;
+  }
+  .user {
+    padding: 30px 20px;
+  }
+  .user__about {
+    flex-basis: 100%;
+    border-right: none;
+    justify-content: center;
+  }
+  .user__info {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+  .user {
+    padding: 20px;
+  }
+  .user__info {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    font-size: 12px;
+  }
+  .user__about {
+    flex-direction: column;
+  }
+  .user__about .about__props {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .user__actions {
+    flex-direction: column;
+  }
+}
+/*# sourceMappingURL=media.css.map */

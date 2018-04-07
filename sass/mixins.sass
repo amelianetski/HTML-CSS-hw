@@ -12,11 +12,17 @@
 
 =send-button()
     +buttons-reset()
-    background-color: rgb(77, 117, 163)
-    color: #ffffff
-
-=add-button()
-    +buttons-reset()
+    min-width: 201px
     background-color: white
-    border: 2px solid rgb(77, 117, 163)
     color: rgb(77, 117, 163)
+    border: 2px solid rgb(77, 117, 163)
+    font-weight: 600
+    &:hover
+        background-color: rgb(77, 117, 163)
+        color: #ffffff
+
+=ellipsis()
+    max-width: 200px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap

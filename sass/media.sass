@@ -1,0 +1,48 @@
+@media (max-width: 1200px)
+	\:root
+		font-size: 18px
+	.user
+		flex-flow: row wrap
+		align-items: center
+		justify-content: center
+		&__about
+			flex-basis: 50%
+		&__actions
+			flex-direction: row
+			padding: 0
+			margin-top: 10px
+			.actions_send
+				margin: 10px
+@media (max-width: 992px)
+	\:root
+		font-size: 16px
+	.user
+		padding: 30px 20px
+		&__about
+			flex-basis: 100%
+			border-right: none
+			justify-content: center
+		&__info
+			flex-basis: 100%
+			justify-content: center
+@media (max-width: 768px)
+	\:root
+		font-size: 14px
+	.user
+		padding: 20px
+		&__about
+		&__info
+			display: flex
+			flex-flow: row wrap
+@media (max-width: 520px)
+	\:root
+		font-size: 12px
+	.user
+		&__about
+			flex-direction: column
+			.about__props
+				margin: 10px 0
+				text-align: center
+		&__info
+		&__actions
+			flex-direction: column

@@ -2,7 +2,11 @@
 @import 'vars'
 @import 'mixins'
 
+\:root
+  font-size: 18px
+
 body
+    min-width: 320px
     padding: 30px 15px
 
 h2
@@ -91,9 +95,9 @@ a
                     margin-left: 10px
                     width: 0
                     height: 0
-                    border-top: 7px solid rgb(162, 177, 201)
-                    border-left: 7px solid transparent
-                    border-right: 7px solid transparent
+                    border-top: 5px solid rgb(162, 177, 201)
+                    border-left: 5px solid transparent
+                    border-right: 5px solid transparent
                 &:hover::after
                     border-top: 7px solid #ffffff
                 .user__profile_name
@@ -124,20 +128,19 @@ a
                     +align-center()
                     height: 100%
                     color: $main_text_color
+                    border-bottom: 5px solid transparent
                     &:hover
                         color: $active_link_color
-            .list__item_active 
-                border-bottom: 5px solid $active_link_color
-                a 
-                    font-weight: 600
-                    color: $active_link_color
+                        border-bottom: 5px solid $active_link_color
+                        font-weight: 600
 
 .user
     background-color: #ffffff
     border-radius: 8px
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
     padding: 46px 50px
-    display: inline-flex
+    display: flex
+    flex-flow: row nowrap
     width: 100%
     justify-content: space-between
     align-items: center
@@ -189,10 +192,8 @@ a
         padding-left: 28px
         .actions_send
             +send-button()
-        .actions_add
-            +add-button()
     
-
-
-
-@import 'media'
+   
+     
+   
+@import 'media' 

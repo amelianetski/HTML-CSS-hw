@@ -9,9 +9,17 @@
     font-family: 'OpenSans-Regular', sans-serif
     box-sizing: border-box
 
+*::before,
+*::afterы
+  box-sizing: inherit
+
 body
     line-height: 1
     background-color: $bg_color
 
 ol, ul
     list-style: none
+
+::selection
+  color: #000
+  background: #fbd404
