@@ -191,7 +191,7 @@ a
     flex-flow: row wrap
     .card
         +card()
-        flex-basis: 30%
+        flex-basis: content
         color: rgb(114, 114, 114)
         &__header 
             +card-header() 
@@ -235,7 +235,11 @@ a
                         img
                             margin: 10px 3px
                             &:first-child
-                                margin-left: 0 
+                                margin-left: 0
+            .body__feed_shared
+                display: flex
+                flex-flow: column 
+                .feed__user
                 .feed__attach_shared
                     border-left:  none
                     display: inline-flex

@@ -134,6 +134,7 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .header__bar {
@@ -299,6 +300,7 @@ a {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  margin-bottom: 50px;
   padding: 46px 50px;
   display: flex;
   flex-flow: row nowrap;
@@ -407,7 +409,8 @@ a {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  flex-basis: 30%;
+  margin-bottom: 50px;
+  flex-basis: content;
   color: #727272;
 }
 
@@ -495,25 +498,30 @@ a {
   margin-left: 0;
 }
 
-.cards .card__body .body__feed .feed__attach_shared {
+.cards .card__body .body__feed_shared {
+  display: flex;
+  flex-flow: column;
+}
+
+.cards .card__body .body__feed_shared .feed__attach_shared {
   border-left: none;
   display: inline-flex;
 }
 
-.cards .card__body .body__feed .feed__attach_shared .attach__img_shared {
+.cards .card__body .body__feed_shared .feed__attach_shared .attach__img_shared {
   border-left: 2px solid #4d75a3;
   padding-left: 15px;
 }
 
-.cards .card__body .body__feed .feed__attach_shared .attach__img_shared img {
+.cards .card__body .body__feed_shared .feed__attach_shared .attach__img_shared img {
   margin: 0;
 }
 
-.cards .card__body .body__feed .feed__attach_shared .attach__text_shared {
+.cards .card__body .body__feed_shared .feed__attach_shared .attach__text_shared {
   margin-left: 20px;
 }
 
-.cards .card__body .body__feed .feed__attach_shared .attach__text_shared a {
+.cards .card__body .body__feed_shared .feed__attach_shared .attach__text_shared a {
   display: block;
   margin-bottom: 10px;
 }
