@@ -431,6 +431,7 @@ a {
     flex-basis: 100%;
     border-right: none;
     justify-content: center;
+    padding: 0;
   }
   .user__info {
     flex-basis: 100%;
