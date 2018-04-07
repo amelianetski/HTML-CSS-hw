@@ -485,9 +485,8 @@ a {
 }
 
 .cards .card__body .body__feed .feed__attach .attach__img {
-  display: inline-flex;
-  align-items: center;
-  flex-direction: row;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .cards .card__body .body__feed .feed__attach .attach__img img {
