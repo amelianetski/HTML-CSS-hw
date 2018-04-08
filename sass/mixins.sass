@@ -10,6 +10,18 @@
     cursor: pointer
     white-space: nowrap
 
+=add-button()
+    background-color: white
+    border: 1px solid rgb(151, 164, 177)
+    border-radius: 4px
+    color: rgb(151, 164, 177)
+    font-size: 12px
+    font-weight: 600
+    padding: 5px 9px
+    &:hover
+        background-color: rgb(77, 117, 163)
+        color: #ffffff
+
 =send-button()
     +buttons-reset()
     min-width: 201px
@@ -69,3 +81,78 @@
         &:hover::after
             border-top: 5px solid #4d75a3
 
+=header-private()
+    background-color: rgb(77, 117, 163)
+    display: inline-flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 15px 30px
+    .header__user
+        +align-center()
+        flex-wrap: nowrap
+        img
+            margin-right: 10px
+        h2
+            color: #ffffff
+            font-size: 16px
+            font-family: 'OpenSans-SemiBold'
+            margin-right: 10px
+            &::after
+                content: ''
+                display: inline-block
+                background-color: #ffffff
+                width: 8px
+                height: 8px
+                border-radius: 50%
+                margin-left: 10px
+
+=send-input()
+    border-top: 1px solid rgb(229, 229, 229)
+    display: inline-flex
+    align-items: center
+    width: 100%
+    padding: 20px
+    flex-direction: row
+    justify-content: space-between
+    input
+        border: none
+        outline: none
+        font-size: 14px
+    .footer__icon:hover
+        cursor: pointer
+
+=message-text()
+    position: relative
+    border-radius: 18px
+    color: rgb(102, 122, 144)
+    font-size: 14px
+    font-weight: 400
+    padding: 9px 25px
+    display: inline-flex
+    max-width: 210px
+    line-height: 18px
+
+=left-tale()
+    content: ''
+    position: absolute
+    bottom: -5px
+    left: -2px
+    display: block
+    width: 17px
+    height: 17px
+    background: url('../img/messages/tale-left.png')
+    background-repeat: no-repeat
+    background-position: center
+
+=right-tale()
+    content: ''
+    position: absolute
+    bottom: -5px
+    right: -2px
+    display: block
+    width: 17px
+    height: 17px
+    background: url('../img/messages/tale-right.png')
+    background-repeat: no-repeat
+    background-position: center

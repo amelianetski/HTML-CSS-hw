@@ -18,6 +18,10 @@
   .user__actions .actions_send {
     margin: 10px;
   }
+  .cards {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 992px) {
@@ -85,6 +89,19 @@
   }
   .user__actions {
     flex-direction: column;
+  }
+  .cards .card__margin {
+    margin: 0 0 50px 0;
+    margin-margin-bottom: 50px;
+  }
+  .cards .card__follow .follow__user .user__info .user__img {
+    margin-right: 5px;
+  }
+  .cards .card__follow .follow__user .user__info .user__name {
+    margin-right: 10px;
+  }
+  .cards .card__follow .follow__user .user__info .user__name h2 {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=media.css.map */

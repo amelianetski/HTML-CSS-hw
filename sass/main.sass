@@ -188,14 +188,85 @@ a
             +send-button()
 .cards
     display: flex
-    flex-flow: row wrap
+    flex-flow: row nowrap
+    .card__margin
+        margin: 0
     .card
         +card()
         flex-basis: content
         color: rgb(114, 114, 114)
-        &__header 
+        display: inline-flex
+        flex-direction: column
+        justify-content: space-between
+        max-width: 350px 
+        &__header
             +card-header() 
             padding: 20px 30px
+        &__header_private
+            +header-private()
+            .header__actions
+                display: inline-flex
+                flex-wrap: nowrap
+                a
+                    color: rgba(255, 255, 255, .65)
+                    margin: 0 5px
+                    font-size: 14px
+        &__messages
+            padding: 20px
+            height: 465px
+            overflow: auto
+            .messages__divider
+                font-size: 12px
+                color: rgb(177, 177, 177)
+                text-align: center
+                width: 100%
+                margin: 15px 0
+                p
+                    display: flex
+                    align-items: center
+                    white-space: nowrap
+                    margin: 0
+                    span 
+                        margin: 0 10px
+                    &::before, &::after
+                        content: ''
+                        display: inline-block
+                        width: 100%
+                        height: 1px
+                        position: relative
+                        background-color: rgb(177, 177, 177)
+            .card__mesage_alert
+                position: relative
+                &::before
+                    content: '\f06a'
+                    font-family: 'FontAwesome'
+                    color: rgb(255, 97, 97)
+                    position: absolute
+                    top: -5px
+                    left: 0
+                    z-index: 10
+            .card__mesage
+                width: 100%
+                display: inline-flex
+                flex-direction: column
+                .message__text
+                    +message-text()
+                .message__timestamp
+                    margin: 10px 0
+                    color: rgb(177, 177, 177)
+                    font-size: 9px
+            .card__mesage_left
+                align-items: flex-start
+                .message__text
+                    background-color: rgb(242, 244, 246)
+                    &::after
+                        +left-tale()
+            .card__mesage_right
+                align-items: flex-end
+                .message__text
+                    background-color: rgb(235, 244, 250)
+                    &::after
+                        +right-tale()
         &__body
             padding: 20px 30px
             .body__feed
@@ -253,9 +324,64 @@ a
                         a
                             display: block
                             margin-bottom: 10px
+        &__follow
+            display: inline-flex
+            flex-direction: column
+            padding: 20px 30px
+            .follow__user
+                width: 100%
+                padding: 10px 0
+                +align-center()
+                flex-direction: row
+                justify-content: space-between
+                .user__info
+                    +align-center()
+                    justify-content: flex-start
+                    .user__img
+                        width: 50px
+                        height: 50px
+                        margin-right: 18px
+                        border-radius: 50%
+                        background-image: url('../img/users/photo.png')
+                        background-position: center
+                        background-repeat: no-repeat
+                    .user__img_online
+                        position: relative
+                        &::after
+                            content: ''
+                            display: block
+                            width: 14px
+                            height: 14px
+                            position: absolute
+                            bottom: 0
+                            right: 0
+                            background-color: rgb(0, 217, 5)
+                            border: 3px solid white
+                            border-radius: 50%
+                    .user__name
+                        color: rgb(151, 164, 177)
+                        font-size: 14px
+                        font-weight: 400
+                        margin-right: 27px
+                        h2 
+                            color: rgb(63, 79, 95)
+                            font-size: 16px
+                            font-weight: 600
+                            margin-bottom: 8px
+                            font-family: 'OpenSans-SemiBold'
+                    .user__name_mobile
+                        h2::after
+                            content: '\f10b'
+                            font-family: 'FontAwesome'
+                            margin-left: 10px
+                            color: rgb(151, 164, 177)
 
-        &__footer 
+                .user__add
+                    +add-button() 
+        &__footer
             +card-footer()
+        &__footer_private
+            +send-input() 
     
   
  

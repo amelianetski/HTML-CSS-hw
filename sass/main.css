@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "OpenSans-Regular";
   src: url("../fonts/Open-Sans/OpenSans-Regular.ttf") format("truetype");
@@ -59,13 +58,35 @@
 }
 
 *::before,
-*::afterы {
+*::after {
   box-sizing: inherit;
 }
 
 body {
   line-height: 1;
   background-color: #e9e8e4;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e5e5e5;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d6d1d1;
+}
+
+a:hover, button:hover {
+  cursor: pointer;
 }
 
 ol, ul {
@@ -401,7 +422,11 @@ a {
 
 .cards {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+}
+
+.cards .card__margin {
+  margin: 0;
 }
 
 .cards .card {
@@ -412,6 +437,10 @@ a {
   margin-bottom: 50px;
   flex-basis: content;
   color: #727272;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 350px;
 }
 
 .cards .card__header {
@@ -430,6 +459,167 @@ a {
 
 .cards .card__header a {
   font-size: 18px;
+}
+
+.cards .card__header_private {
+  background-color: #4d75a3;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.cards .card__header_private .header__user {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.cards .card__header_private .header__user img {
+  margin-right: 10px;
+}
+
+.cards .card__header_private .header__user h2 {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'OpenSans-SemiBold';
+  margin-right: 10px;
+}
+
+.cards .card__header_private .header__user h2::after {
+  content: '';
+  display: inline-block;
+  background-color: #ffffff;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.cards .card__header_private .header__actions {
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+
+.cards .card__header_private .header__actions a {
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.cards .card__messages {
+  padding: 20px;
+  height: 465px;
+  overflow: auto;
+}
+
+.cards .card__messages .messages__divider {
+  font-size: 12px;
+  color: #b1b1b1;
+  text-align: center;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.cards .card__messages .messages__divider p {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.cards .card__messages .messages__divider p span {
+  margin: 0 10px;
+}
+
+.cards .card__messages .messages__divider p::before, .cards .card__messages .messages__divider p::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  position: relative;
+  background-color: #b1b1b1;
+}
+
+.cards .card__messages .card__mesage_alert {
+  position: relative;
+}
+
+.cards .card__messages .card__mesage_alert::before {
+  content: '\f06a';
+  font-family: 'FontAwesome';
+  color: #ff6161;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  z-index: 10;
+}
+
+.cards .card__messages .card__mesage {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.cards .card__messages .card__mesage .message__text {
+  position: relative;
+  border-radius: 18px;
+  color: #667a90;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 9px 25px;
+  display: inline-flex;
+  max-width: 210px;
+  line-height: 18px;
+}
+
+.cards .card__messages .card__mesage .message__timestamp {
+  margin: 10px 0;
+  color: #b1b1b1;
+  font-size: 9px;
+}
+
+.cards .card__messages .card__mesage_left {
+  align-items: flex-start;
+}
+
+.cards .card__messages .card__mesage_left .message__text {
+  background-color: #f2f4f6;
+}
+
+.cards .card__messages .card__mesage_left .message__text::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: -2px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url("../img/messages/tale-left.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cards .card__messages .card__mesage_right {
+  align-items: flex-end;
+}
+
+.cards .card__messages .card__mesage_right .message__text {
+  background-color: #ebf4fa;
+}
+
+.cards .card__messages .card__mesage_right .message__text::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: -2px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url("../img/messages/tale-right.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .cards .card__body {
@@ -525,6 +715,91 @@ a {
   margin-bottom: 10px;
 }
 
+.cards .card__follow {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+.cards .card__follow .follow__user {
+  width: 100%;
+  padding: 10px 0;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cards .card__follow .follow__user .user__info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cards .card__follow .follow__user .user__info .user__img {
+  width: 50px;
+  height: 50px;
+  margin-right: 18px;
+  border-radius: 50%;
+  background-image: url("../img/users/photo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cards .card__follow .follow__user .user__info .user__img_online {
+  position: relative;
+}
+
+.cards .card__follow .follow__user .user__info .user__img_online::after {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #00d905;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.cards .card__follow .follow__user .user__info .user__name {
+  color: #97a4b1;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 27px;
+}
+
+.cards .card__follow .follow__user .user__info .user__name h2 {
+  color: #3f4f5f;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: 'OpenSans-SemiBold';
+}
+
+.cards .card__follow .follow__user .user__info .user__name_mobile h2::after {
+  content: '\f10b';
+  font-family: 'FontAwesome';
+  margin-left: 10px;
+  color: #97a4b1;
+}
+
+.cards .card__follow .follow__user .user__add {
+  background-color: white;
+  border: 1px solid #97a4b1;
+  border-radius: 4px;
+  color: #97a4b1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 9px;
+}
+
+.cards .card__follow .follow__user .user__add:hover {
+  background-color: #4d75a3;
+  color: #ffffff;
+}
+
 .cards .card__footer {
   padding: 20px 0;
   background-color: #ebf4fa;
@@ -557,6 +832,26 @@ a {
   border-top: 5px solid #4d75a3;
 }
 
+.cards .card__footer_private {
+  border-top: 1px solid #e5e5e5;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cards .card__footer_private input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.cards .card__footer_private .footer__icon:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) {
   :root {
     font-size: 18px;
@@ -576,6 +871,10 @@ a {
   }
   .user__actions .actions_send {
     margin: 10px;
+  }
+  .cards {
+    flex-flow: row wrap;
+    justify-content: center;
   }
 }
 
@@ -644,6 +943,18 @@ a {
   }
   .user__actions {
     flex-direction: column;
+  }
+  .cards .card__margin {
+    margin: 0 0 50px 0;
+  }
+  .cards .card__follow .follow__user .user__info .user__img {
+    margin-right: 5px;
+  }
+  .cards .card__follow .follow__user .user__info .user__name {
+    margin-right: 10px;
+  }
+  .cards .card__follow .follow__user .user__info .user__name h2 {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=main.css.map */
