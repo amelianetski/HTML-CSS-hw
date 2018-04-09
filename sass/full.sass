@@ -1,3 +1,4 @@
+@import '_vars'
 @import 'mixins'
 .chat
     width: 100%
@@ -29,6 +30,78 @@
                     color: rgb(166, 186, 209)
                     margin: 0 5px
                     font-size: 16px		
+        .sidebar__list
+            max-height: $chat_height + 131px
+            overflow: auto
+            position: relative
+            .gradient
+                position: absolute
+                bottom: 0
+                z-index: 550
+                width: 100%
+                height: 27px
+                background-image: linear-gradient(to top, white 0%, transparent 100%)
+            .follow__user
+                padding: 20px
+                border-bottom: 1px solid rgb(237, 237, 237)
+                &:hover
+                    background-color: rgb(235, 244, 250)
+                    cursor: pointer
+                .user__info
+                    display: inline-flex
+                    align-items: center
+                    width: 100%
+                    .user__img
+                        margin-right: 10px
+                        position: relative
+                    .user__img_online::after
+                        content: ''
+                        display: block
+                        width: 14px
+                        height: 14px
+                        background-color: rgb(0, 217, 5)
+                        border: 3px solid rgb(235, 244, 250)
+                        border-radius: 50%
+                        position: absolute
+                        top: -6px
+                        right: -6px
+                        img
+                            width: 55px
+                            height: 55px
+                    .user__name
+                        width: 100%
+                        position: relative
+                        .user__time
+                            position: absolute
+                            right: 0
+                            top: 0
+                            color: rgb(177, 177, 177)
+                            font-size: 14px
+                            line-height: 24px
+                        .user__notifi
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            color: #ffffff
+                            width: 24px
+                            height: 24px
+                            background-color: rgba(77, 117, 163, 0.75)
+                            border-radius: 2px
+                            font-size: 12px
+                            position: absolute
+                            bottom: -12px
+                            right: 0
+                        h2
+                            color: rgb(63, 79, 95)
+                            font-size: 16px
+                            line-height: 18px
+                            margin-bottom: 7px
+                        p 
+                            color: rgb(102, 122, 144)
+                            font-size: 14px
+                            img
+                                margin: 0 5px
+                                margin-bottom: -5px
     &__main
         flex-grow: 1
         .main__header
@@ -66,10 +139,13 @@
                     font-size: 16px
         .main__messages
             padding: 30px 20px
+            max-height: $chat_height
+            overflow: auto
             .card__mesage
                 width: 100%
                 display: inline-flex
                 flex-direction: column
+                margin-bottom: 15px
                 .message__text
                     position: relative
                     border-radius: 18px
@@ -78,40 +154,52 @@
                     font-weight: 400
                     padding: 9px 25px
                     display: inline-flex
-                    line-height: 18px
+                    line-height: 22px
+                    img 
+                        margin: 0 5px
+                        margin-bottom: -5px
                 .message__timestamp
                     margin: 10px 0
                     color: rgb(177, 177, 177)
                     font-size: 9px
+            .message__single
+                display: inline-flex
+                align-items: flex-end
+                .message__avatar
+                    margin-right: 10px
+                .message__text
+                    max-width: auto
+                .message__text_img
+                    display: inline-flex
+                    flex-flow: row wrap
+                    img
+                        margin: 0 5px
             .card__mesage_left
-                align-items: flex-start 
                 .message__text
                     background-color: rgb(242, 244, 246)
                     &::after 
                         +left-tale()
+                .message__single
+                    max-width: 600px
+                    .message__avatar
+                        margin-right: 10px
+                .message__timestamp
+                    display: inline-block
+                    margin-left: 60px
             .card__mesage_right
                 align-items: flex-end
                 .message__text
                     background-color: rgb(235, 244, 250)
                     &::after
                         +right-tale()
-            .message__single
-                display: inline-flex
-                .message__avatar
-                    margin-right: 10px
-                .message__text
-                    max-width: auto
-                .message__text_img
-                    img
-                        margin: 0 5px
-            .card__mesage_left
                 .message__single
+                    max-width: 400px
+                    flex-direction: row-reverse
                     .message__avatar
-                        margin-right: 10px
-            .card__mesage_right
-                .message__single
-                    .message__avatar
-                        margin-left: 10px		
+                        margin-left: 10px	
+                .message__timestamp
+                    display: inline-block
+                    margin-right: 60px
         .main__footer
             background-color: rgb(242, 244, 246)
             border-top: 1px solid rgb(229, 229, 229)
@@ -127,6 +215,7 @@
                         border: 1px solid rgb(229, 229, 229)
                         border-radius: 6px
                         height: 47px
+                        padding: 0 20px
                     .box__attachment
                         margin-top: 10px
                         width: 100%
