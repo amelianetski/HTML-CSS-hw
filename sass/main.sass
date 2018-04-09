@@ -189,16 +189,16 @@ a
 .cards
     display: flex
     flex-flow: row nowrap
+    justify-content: space-between
     .card__margin
-        margin: 0
+        margin: 0 50px
     .card
         +card()
-        flex-basis: content
         color: rgb(114, 114, 114)
         display: inline-flex
         flex-direction: column
-        justify-content: space-between
-        max-width: 350px 
+        justify-content: space-between 
+        max-width: 350px
         &__header
             +card-header() 
             padding: 20px 30px
@@ -381,7 +381,7 @@ a
         &__footer
             +card-footer()
         &__footer_private
-            +send-input() 
+            +send-input()
     
   
  

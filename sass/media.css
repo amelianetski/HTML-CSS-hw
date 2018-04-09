@@ -90,9 +90,12 @@
   .user__actions {
     flex-direction: column;
   }
+  .cards .card {
+    max-width: 100%;
+    width: 100%;
+  }
   .cards .card__margin {
     margin: 0 0 50px 0;
-    margin-margin-bottom: 50px;
   }
   .cards .card__follow .follow__user .user__info .user__img {
     margin-right: 5px;
