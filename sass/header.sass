@@ -1,0 +1,114 @@
+@import 'mixins'
+@import 'vars'
+.wrapper
+    max-width: $max_width
+    margin: 0 auto
+
+.header
+    border-radius: 8px
+    color: #ffffff
+    overflow: hidden 
+    +card()
+    margin-bottom: 50px
+    &__bar
+        width: 100%
+        background-color: rgb(77, 117, 163)
+        display: inline-flex 
+        justify-content: space-between
+        .bar__actions 
+            +align-center()
+            .actions__logo
+                padding: 30px 25px
+                border-right: 1px solid rgb(65, 99, 138)
+                +align-center()
+                &:hover
+                    cursor: pointer 
+                .logo_text
+                    text-transform: uppercase
+                    font-family: 'OpenSans-Bold'
+            .actions__notifi, .actions__people, .actions__messages
+                +align-center()
+                padding: 30px 25px
+                border-right: 1px solid rgb(65, 99, 138)
+                color: rgb(162, 177, 201)
+                &:hover
+                    color: #ffffff
+                    cursor: pointer
+            .actions__notifi
+                i
+                    position: relative
+                    &::after
+                        content: '1'
+                        font-family: 'OpenSans-Bold'
+                        z-index: 10
+                        position: absolute
+                        top: -10px
+                        right: -10px    
+                        font-size: 9px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        width: 16px
+                        height: 16px
+                        border: 1px solid rgb(77, 117, 163)
+                        background-color: rgb(255, 97, 97)
+                        border-radius: 3px
+            .actions_active
+                color: #ffffff
+        .bar__user
+            +align-center()
+            .user__profile, .user__search, .user__logout
+                +align-center()
+                padding: 30px 25px
+                color: rgb(162, 177, 201)
+                &:hover
+                    color: #ffffff
+                    cursor: pointer
+            .user__profile
+                font-family: 'ProximaNova-Semibold'
+                padding-right: 41px
+                &::after
+                    content: ''
+                    display: inline-block
+                    margin-left: 10px
+                    width: 0
+                    height: 0
+                    border-top: 5px solid rgb(162, 177, 201)
+                    border-left: 5px solid transparent
+                    border-right: 5px solid transparent
+                &:hover::after
+                    border-top: 7px solid #ffffff
+                .user__profile_name
+                    font-size: 14px
+                    margin-right: 21px
+            .user__search
+                border-right: 1px solid rgb(65, 99, 138)
+                border-left: 1px solid rgb(65, 99, 138)
+            .user__profile.user_active
+                color: #ffffff 
+                &::after  
+                    border-top: 7px solid #ffffff
+    &__nav 
+        height: 75px
+        width: 100%
+        +align-center()
+        justify-content: center
+        background-color: #fff
+        .nav__list
+            display: inline-flex
+            flex-flow: row wrap
+            justify-content: center
+            height: 100%
+            .list__item
+                margin: 0 25px
+                a
+                    font-family: 'OpenSans-SemiBold'
+                    font-weight: 400
+                    +align-center()
+                    height: 100%
+                    color: $main_text_color
+                    border-bottom: 5px solid transparent
+                    &:hover
+                        color: $active_link_color
+                        border-bottom: 5px solid $active_link_color
+                        font-weight: 600

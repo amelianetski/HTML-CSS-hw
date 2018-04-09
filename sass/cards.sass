@@ -1,0 +1,143 @@
+@import 'mixins'
+@import 'vars'
+.cards
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    .card__margin
+        margin: 0 50px
+    .card
+        +card()
+        color: rgb(114, 114, 114)
+        display: inline-flex
+        flex-direction: column
+        justify-content: space-between 
+        max-width: 350px
+        &__header 
+            +card-header() 
+            padding: 20px 30px
+        &__header_private 
+            +header-private()
+            .header__actions
+                display: inline-flex
+                flex-wrap: nowrap
+                a
+                    color: rgba(255, 255, 255, .65)
+                    margin: 0 5px
+                    font-size: 14px
+        &__messages
+            +messages-list()
+        &__body
+            padding: 20px 30px
+            .body__feed
+                .feed__user
+                    display: inline-flex
+                    align-items: center
+                    flex-direction: row
+                    margin: 5px 0
+                    .user__img
+                        color: rgba(0, 0, 0, .37)
+                        width: $feed_img_width
+                        margin-right: 38px - ($feed_img_width/2)
+                        text-align: center
+                    .user__name
+                        font-size: 14px
+                        font-weight: 400
+                        a 
+                            color: rgb(77, 117, 163)
+                            &:hover
+                                color: #4d75a3
+                .feed__attach
+                    margin-left: $feed_img_width / 2
+                    min-height: 15px
+                    border-left: 1px solid rgba(0, 0, 0, .12)
+                    padding-left: 38px
+                    font-size: 14px
+                    a 
+                        color: rgb(77, 117, 163)
+                        &:hover
+                            color: #4d75a3
+                    .attach__title
+                        width: 100%
+                        display: block
+                    .attach__img
+                        display: flex
+                        flex-flow: row wrap
+                        img
+                            margin: 10px 3px
+                            &:first-child
+                                margin-left: 0
+            .body__feed_shared
+                display: flex
+                flex-flow: column 
+                .feed__user
+                .feed__attach_shared
+                    border-left:  none
+                    display: inline-flex
+                    .attach__img_shared 
+                        border-left: 2px solid rgb(77, 117, 163)
+                        padding-left: 15px
+                        img 
+                            margin: 0
+                    .attach__text_shared
+                        margin-left: 20px
+                        a
+                            display: block
+                            margin-bottom: 10px
+        &__follow
+            display: inline-flex
+            flex-direction: column
+            padding: 20px 30px
+            .follow__user
+                width: 100%
+                padding: 10px 0
+                +align-center()
+                flex-direction: row
+                justify-content: space-between
+                .user__info
+                    +align-center()
+                    justify-content: flex-start
+                    .user__img
+                        width: 50px
+                        height: 50px
+                        margin-right: 18px
+                        border-radius: 50%
+                        background-image: url('../img/users/photo.png')
+                        background-position: center
+                        background-repeat: no-repeat
+                    .user__img_online
+                        position: relative
+                        &::after
+                            content: ''
+                            display: block
+                            width: 14px
+                            height: 14px
+                            position: absolute
+                            bottom: 0
+                            right: 0
+                            background-color: rgb(0, 217, 5)
+                            border: 3px solid white
+                            border-radius: 50%
+                    .user__name
+                        color: rgb(151, 164, 177)
+                        font-size: 14px
+                        font-weight: 400
+                        margin-right: 27px
+                        h2 
+                            color: rgb(63, 79, 95)
+                            font-size: 16px
+                            font-weight: 600
+                            margin-bottom: 8px
+                            font-family: 'OpenSans-SemiBold'
+                    .user__name_mobile
+                        h2::after
+                            content: '\f10b'
+                            font-family: 'FontAwesome'
+                            margin-left: 10px
+                            color: rgb(151, 164, 177)
+                .user__add
+                    +add-button() 
+        &__footer
+            +card-footer()
+        &__footer_private
+            +send-input()

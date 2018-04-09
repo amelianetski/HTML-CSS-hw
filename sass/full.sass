@@ -1,0 +1,166 @@
+@import 'mixins'
+.chat
+    width: 100%
+    display: inline-flex
+    flex-direction: row
+    background-color: #ffffff
+    &__sidebar
+        min-width: 336px
+        border-right: 1px solid rgb(229, 229, 229)
+        .sidebar__header
+            background-color: rgb(77, 117, 163)
+            display: inline-flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            padding: 15px 30px
+            border-bottom: 1px solid rgb(229, 229, 229)
+            width: 100%
+            height: 95px
+            background-color: #ffffff
+            .sidebar__header_title
+                h2
+                    font-size: 16px
+                    color: rgb(102, 122, 144)
+            .sidebar__header_actions
+                display: inline-flex
+                flex-wrap: nowrap
+                a
+                    color: rgb(166, 186, 209)
+                    margin: 0 5px
+                    font-size: 16px		
+    &__main
+        flex-grow: 1
+        .main__header
+            +header-private()
+            background-color: rgba(255, 255, 255, .65)
+            border-bottom: 1px solid rgb(229, 229, 229)
+            width: 100%
+            height: 95px
+            .header__user
+                .user__img
+                    width: 55px
+                    height: 55px
+                    background-image: url('../img/users/photo.png')
+                    background-position: center
+                    background-repeat: no-repeat
+                    margin-right: 10px
+                .user__name
+                    h2
+                        color: rgb(63, 79, 95)
+                        font-size: 16px
+                        margin-bottom: 5px
+                    p
+                        color: rgb(119, 119, 119)
+                        font-size: 14px
+                        &::before
+                            content: '\f10b'
+                            font-family: 'FontAwesome'
+                            margin-right: 5px
+            .header__actions
+                display: inline-flex
+                flex-wrap: nowrap
+                a
+                    color: rgb(166, 186, 209)
+                    margin: 0 5px
+                    font-size: 16px
+        .main__messages
+            padding: 30px 20px
+            .card__mesage
+                width: 100%
+                display: inline-flex
+                flex-direction: column
+                .message__text
+                    position: relative
+                    border-radius: 18px
+                    color: rgb(102, 122, 144)
+                    font-size: 14px
+                    font-weight: 400
+                    padding: 9px 25px
+                    display: inline-flex
+                    line-height: 18px
+                .message__timestamp
+                    margin: 10px 0
+                    color: rgb(177, 177, 177)
+                    font-size: 9px
+            .card__mesage_left
+                align-items: flex-start 
+                .message__text
+                    background-color: rgb(242, 244, 246)
+                    &::after 
+                        +left-tale()
+            .card__mesage_right
+                align-items: flex-end
+                .message__text
+                    background-color: rgb(235, 244, 250)
+                    &::after
+                        +right-tale()
+            .message__single
+                display: inline-flex
+                .message__avatar
+                    margin-right: 10px
+                .message__text
+                    max-width: auto
+                .message__text_img
+                    img
+                        margin: 0 5px
+            .card__mesage_left
+                .message__single
+                    .message__avatar
+                        margin-right: 10px
+            .card__mesage_right
+                .message__single
+                    .message__avatar
+                        margin-left: 10px		
+        .main__footer
+            background-color: rgb(242, 244, 246)
+            border-top: 1px solid rgb(229, 229, 229)
+            .footer__input
+                width: 100%
+                display: inline-flex
+                padding: 24px 18px
+                .input__box
+                    flex-grow: 1
+                    input
+                        width: 100%
+                        background-color: white
+                        border: 1px solid rgb(229, 229, 229)
+                        border-radius: 6px
+                        height: 47px
+                    .box__attachment
+                        margin-top: 10px
+                        width: 100%
+                        display: inline-flex
+                        align-items: center
+                        justify-content: space-between
+                        .attachment__smiles
+                            a
+                                color: rgb(166, 186, 209)
+                                font-size: 25px
+                                margin-right: 7px
+                            a:first-child
+                                margin-right: 20px
+                        .attachment__dropdown
+                            span
+                                color: rgb(43, 88, 122)
+                                font-size: 14px
+                                cursor: pointer
+                                &::after
+                                    content: ''
+                                    display: inline-block
+                                    width: 0
+                                    height: 0
+                                    border-top: 5px solid rgb(162, 177, 201)
+                                    border-left: 5px solid transparent
+                                    border-right: 5px solid transparent
+                                    margin-left: 5px
+                .footer__button
+                    +buttons-reset() 
+                    width: 120px
+                    height: 47px 
+                    margin-left: 13px
+                    background-color: rgb(77, 117, 163)
+                    color: #ffffff
+                    font-weight: 600
+                    padding: 0
+                    border: 0

@@ -16,21 +16,36 @@
 body
     line-height: 1
     background-color: $bg_color
+    min-width: 320px
+    padding: 30px 15px
+\:root
+  font-size: 18px
 
 \::-webkit-scrollbar
   width: 5px
   height: 5px
+
 \::-webkit-scrollbar-track
   background: transparent
+
 \::-webkit-scrollbar-thumb
   background-color: rgb(229, 229, 229)
   border-radius: 3px
   &:hover
     background: rgb(214, 209, 209)
 
+a
+    text-decoration: none
+
 a:hover, button:hover
     cursor: pointer
 
+h2
+    font-size: 24px
+    font-family: 'OpenSans-Light'
+
+button, input
+  outline: 0
 
 ol, ul
     list-style: none

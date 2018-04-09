@@ -1,0 +1,67 @@
+@import 'mixins'
+.user
+    +card()
+    padding: 46px 50px
+    display: flex 
+    flex-flow: row nowrap
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 50px
+    &__about
+        +align-center()
+        border-right: 1px solid rgb(229, 229, 229)
+        padding-right: 28px
+        .about__logo img
+            width: 100px
+            height: 100px
+            border-radius: 50%
+        .about__props
+            margin-left: 20px
+            .props_name
+                margin-bottom: 10px
+                span
+                    color: rgb(63, 79, 95)
+                    font-size: 24px
+                    font-weight: 600
+                    &::after
+                        content: '\f058'
+                        font-family: 'FontAwesome'
+                        display: inline-block
+                        color: rgb(166, 186, 209)
+                        font-size: 20px
+                        margin-left: 10px
+            .props_text
+                p
+                    color: rgb(102, 122, 144)
+                    font-size: 14px
+                    font-weight: 400
+                    line-height: 24px
+    &__info
+        display: inline-flex
+        .info__count
+            display: inline-flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            margin: 20px
+            .count_numbers
+                margin-bottom: 10px
+                span
+                    font-family: 'OpenSans-SemiBold'
+                    color: rgb(77, 117, 163)
+                    font-size: 24px
+                    font-weight: 600
+            .count_text span
+                font-size: 14px
+                font-family: 'OpenSans-SemiBold'
+                color: rgb(102, 122, 144)
+                font-weight: 400
+    &__actions
+        display: inline-flex
+        flex-direction: column
+        padding-left: 28px
+        .actions_send
+            +send-button()
+
+ 

@@ -65,6 +65,12 @@
 body {
   line-height: 1;
   background-color: #e9e8e4;
+  min-width: 320px;
+  padding: 30px 15px;
+}
+
+:root {
+  font-size: 18px;
 }
 
 ::-webkit-scrollbar {
@@ -85,8 +91,21 @@ body {
   background: #d6d1d1;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:hover, button:hover {
   cursor: pointer;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: 'OpenSans-Light';
+}
+
+button, input {
+  outline: 0;
 }
 
 ol, ul {
