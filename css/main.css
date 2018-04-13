@@ -1215,7 +1215,7 @@ ol, ul {
 }
 
 .chat__main .main__messages .message__single .message__text_img img {
-  margin: 0 5px;
+  margin: 5px 5px;
 }
 
 .chat__main .main__messages .card__mesage_left .message__text {
@@ -1412,12 +1412,21 @@ ol, ul {
     flex-flow: row wrap;
     justify-content: center;
   }
+  .header__bar .bar__actions {
+    font-size: 18px;
+  }
   .header__bar .bar__actions .actions__logo, .header__bar .bar__actions .actions__notifi, .header__bar .bar__actions .actions__people, .header__bar .bar__actions .actions__messages {
     border: none;
+  }
+  .header__bar .bar__user {
+    font-size: 18px;
   }
   .header__bar .bar__user .user__search {
     border-right: none;
     border-left: none;
+  }
+  .header__nav {
+    font-size: 14px;
   }
   .user {
     padding: 20px;
@@ -1425,6 +1434,9 @@ ol, ul {
   .user__info {
     display: flex;
     flex-flow: row wrap;
+  }
+  .cards .card__footer_private {
+    font-size: 18px;
   }
   .chat .chat__sidebar {
     display: none;
@@ -1469,6 +1481,9 @@ ol, ul {
   }
   .cards .card__follow .follow__user .user__info .user__name h2 {
     font-size: 14px;
+  }
+  .mb__hidden {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

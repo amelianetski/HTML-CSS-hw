@@ -37,18 +37,26 @@
 			flex-flow: row wrap
 			justify-content: center
 			.bar__actions
+				font-size: 18px
 				.actions__logo, .actions__notifi, .actions__people, .actions__messages
 					border: none
 			.bar__user
+				font-size: 18px
 				.user__search
 					border-right: none
 					border-left: none
+		&__nav
+			font-size: 14px
 	.user
 		padding: 20px
 		&__about
 		&__info
 			display: flex
 			flex-flow: row wrap
+	.cards
+		.card
+			&__footer_private
+				font-size: 18px
 	.chat
 		.chat__sidebar
 			display: none
@@ -91,3 +99,5 @@
 						margin-right: 10px
 						h2
 							font-size: 14px
+	.mb__hidden
+		display: none
